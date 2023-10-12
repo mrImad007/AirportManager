@@ -13,6 +13,7 @@ public class Escale {
     }
 
     public int getDuration() {
+
         return duration;
     }
 
