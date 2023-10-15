@@ -10,27 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4776af3-53c7-4704-82fb-4c5126b61a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/PassengerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/PassengerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DBConnection/PostgresDBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/ReservationExtra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/AdminDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/AdminImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/ReservationDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -197,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697041562976</updated>
-      <workItem from="1697041564256" duration="20859000" />
+      <workItem from="1697041564256" duration="24002000" />
     </task>
     <servers />
   </component>
