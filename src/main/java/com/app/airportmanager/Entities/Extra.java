@@ -1,6 +1,12 @@
 package com.app.airportmanager.Entities;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "extra")
 public class Extra {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private float price;
@@ -29,9 +35,12 @@ public class Extra {
         this.price = price;
     }
 
-    public Extra(int id, String name, float price) {
-        this.id = id;
+    public Extra(String name, float price) {
         this.name = name;
         this.price = price;
+    }
+
+    public Extra() {
+
     }
 }
