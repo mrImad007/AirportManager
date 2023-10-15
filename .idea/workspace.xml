@@ -10,32 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4776af3-53c7-4704-82fb-4c5126b61a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/PassengerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/PassengerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DBConnection/PostgresDBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/ReservationExtra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -69,6 +65,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2Wcp8NtDQ61EQeGWgL7loM6wxdU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -79,6 +78,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -197,11 +197,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697041562976</updated>
-      <workItem from="1697041564256" duration="7307000" />
+      <workItem from="1697041564256" duration="20859000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
