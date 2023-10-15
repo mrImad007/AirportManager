@@ -12,7 +12,6 @@ import java.util.List;
 public class FlightImpl implements FlightDao {
     private SessionFactory sessionFactory;
     Transaction transaction = null;
-
     public FlightImpl (){
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
@@ -33,7 +32,6 @@ public class FlightImpl implements FlightDao {
         }
         return false;
     }
-
     @Override
     public boolean update_flight(Flight flight) {
         try (Session session = sessionFactory.openSession()) {
@@ -51,15 +49,13 @@ public class FlightImpl implements FlightDao {
         }
         return false;
     }
-
-
     @Override
-    public boolean delete_flight(Flight flight) {
+    public boolean delete_flight(int id) {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = null;
             try {
                 transaction = session.beginTransaction();
-                session.delete(flight);
+                session.delete(id);
                 transaction.commit();
                 return true;
             } catch (Exception e) {
@@ -71,8 +67,6 @@ public class FlightImpl implements FlightDao {
         }
         return false;
     }
-
-
     @Override
     public Flight getFlightById(int id) {
         try (Session session = sessionFactory.openSession()) {
@@ -82,8 +76,6 @@ public class FlightImpl implements FlightDao {
             return null;
         }
     }
-
-
     @Override
     public List<Flight> getAllFlights() {
         try (Session session = sessionFactory.openSession()) {
