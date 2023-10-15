@@ -3,7 +3,6 @@ package com.app.airportmanager.DAO;
 import com.app.airportmanager.Entities.Users.Passenger;
 
 public interface PassengerDao {
-    public boolean login(Passenger passenger);
-    public boolean register(Passenger passenger);
-
+    boolean login(Passenger passenger);
+    boolean register(Passenger passenger);
 }

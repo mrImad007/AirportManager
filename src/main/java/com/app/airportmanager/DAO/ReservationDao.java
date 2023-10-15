@@ -3,10 +3,11 @@ package com.app.airportmanager.DAO;
 import com.app.airportmanager.Entities.Reservation;
 
 import java.sql.ResultSet;
+import java.util.List;
 
 public interface ReservationDao {
-    public boolean create_reservation(Reservation reservation);
-    public boolean update_reservation(Reservation reservation);
-    public boolean delete_reservation(Reservation reservation);
-    public ResultSet getAllreservations();
+    boolean create_reservation(Reservation reservation);
+    boolean update_reservation(Reservation reservation);
+    boolean delete_reservation(int id);
+    List<Reservation> getAllReservations();
 }
