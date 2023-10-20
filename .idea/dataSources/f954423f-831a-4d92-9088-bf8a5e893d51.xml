@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
+      <IntrospectionStateNumber>855</IntrospectionStateNumber>
       <ServerVersion>15.4</ServerVersion>
       <StartupTime>1697742365</StartupTime>
       <TimeZones>true ACDT
@@ -810,7 +810,7 @@ false Zulu
 13471||10|C|G
 13471||-9223372036854775808|U|G
 13471||10|U|G</Grants>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
+      <IntrospectionStateNumber>855</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>imads</OwnerName>
     </database>
@@ -4223,7 +4223,7 @@ false Zulu
     <schema id="263" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>811</IntrospectionStateNumber>
+      <IntrospectionStateNumber>855</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>517</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4234,25 +4234,91 @@ false Zulu
       <StateNumber>739</StateNumber>
       <OwnerName>imads</OwnerName>
     </sequence>
-    <sequence id="265" parent="263" name="passenger_passenger_id_seq">
+    <sequence id="265" parent="263" name="airline_airline_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16496</ObjectId>
+      <StateNumber>818</StateNumber>
+      <OwnerName>imads</OwnerName>
+    </sequence>
+    <sequence id="266" parent="263" name="extra_extra_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16520</ObjectId>
+      <StateNumber>839</StateNumber>
+      <OwnerName>imads</OwnerName>
+    </sequence>
+    <sequence id="267" parent="263" name="flight_flight_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16489</ObjectId>
+      <StateNumber>815</StateNumber>
+      <OwnerName>imads</OwnerName>
+    </sequence>
+    <sequence id="268" parent="263" name="passenger_passenger_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16388</ObjectId>
       <StateNumber>736</StateNumber>
       <OwnerName>imads</OwnerName>
     </sequence>
-    <table id="266" parent="263" name="admin">
+    <sequence id="269" parent="263" name="reservation_reservation_number_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16527</ObjectId>
+      <StateNumber>842</StateNumber>
+      <OwnerName>imads</OwnerName>
+    </sequence>
+    <sequence id="270" parent="263" name="stopover_stopover_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16503</ObjectId>
+      <StateNumber>821</StateNumber>
+      <OwnerName>imads</OwnerName>
+    </sequence>
+    <table id="271" parent="263" name="admin">
       <ObjectId>16396</ObjectId>
       <StateNumber>810</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>imads</OwnerName>
     </table>
-    <table id="267" parent="263" name="passenger">
-      <ObjectId>16389</ObjectId>
-      <StateNumber>743</StateNumber>
+    <table id="272" parent="263" name="airline">
+      <ObjectId>16497</ObjectId>
+      <StateNumber>829</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>imads</OwnerName>
     </table>
-    <column id="268" parent="266" name="admin_id">
+    <table id="273" parent="263" name="extra">
+      <ObjectId>16521</ObjectId>
+      <StateNumber>854</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <table id="274" parent="263" name="flight">
+      <ObjectId>16490</ObjectId>
+      <StateNumber>832</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <table id="275" parent="263" name="passenger">
+      <ObjectId>16389</ObjectId>
+      <StateNumber>845</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <table id="276" parent="263" name="reservation">
+      <ObjectId>16528</ObjectId>
+      <StateNumber>845</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <table id="277" parent="263" name="reservation_extra">
+      <ObjectId>16539</ObjectId>
+      <StateNumber>851</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <table id="278" parent="263" name="stopover">
+      <ObjectId>16504</ObjectId>
+      <StateNumber>835</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>imads</OwnerName>
+    </table>
+    <column id="279" parent="271" name="admin_id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;admin_admin_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4261,37 +4327,37 @@ false Zulu
       <SequenceId>16395</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="269" parent="266" name="first_name">
+    <column id="280" parent="271" name="first_name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
       <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="270" parent="266" name="last_name">
+    <column id="281" parent="271" name="last_name">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
       <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="271" parent="266" name="email">
+    <column id="282" parent="271" name="email">
       <DasType>varchar(100)|0s</DasType>
       <Position>4</Position>
       <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="272" parent="266" name="password">
+    <column id="283" parent="271" name="password">
       <DasType>varchar(100)|0s</DasType>
       <Position>5</Position>
       <StateNumber>739</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="273" parent="266" name="phone_number">
+    <column id="284" parent="271" name="phone_number">
       <DasType>varchar(100)|0s</DasType>
       <Position>6</Position>
       <StateNumber>810</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="274" parent="266" name="admin_pkey">
+    <index id="285" parent="271" name="admin_pkey">
       <ColNames>admin_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16400</ObjectId>
@@ -4300,14 +4366,174 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="275" parent="266" name="admin_pkey">
+    <key id="286" parent="271" name="admin_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16401</ObjectId>
       <Primary>1</Primary>
       <StateNumber>739</StateNumber>
       <UnderlyingIndexId>16400</UnderlyingIndexId>
     </key>
-    <column id="276" parent="267" name="passenger_id">
+    <column id="287" parent="272" name="airline_id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;airline_airline_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>818</StateNumber>
+      <SequenceId>16496</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="288" parent="272" name="name">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>818</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="289" parent="272" name="airline_pkey">
+      <ColNames>airline_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16501</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>818</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="290" parent="272" name="airline_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16502</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>818</StateNumber>
+      <UnderlyingIndexId>16501</UnderlyingIndexId>
+    </key>
+    <column id="291" parent="273" name="extra_id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;extra_extra_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>839</StateNumber>
+      <SequenceId>16520</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="292" parent="273" name="name">
+      <DasType>varchar(100)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="293" parent="273" name="price">
+      <DasType>double precision|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>839</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="294" parent="273" name="extra_pkey">
+      <ColNames>extra_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16525</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>839</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="295" parent="273" name="extra_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16526</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>839</StateNumber>
+      <UnderlyingIndexId>16525</UnderlyingIndexId>
+    </key>
+    <column id="296" parent="274" name="flight_id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;flight_flight_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>815</StateNumber>
+      <SequenceId>16489</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="297" parent="274" name="departure_city">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="298" parent="274" name="arrival_city">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>815</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="299" parent="274" name="departure_time">
+      <DasType>date|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>815</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="300" parent="274" name="arrival_time">
+      <DasType>date|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>815</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="301" parent="274" name="available_seats">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>815</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="302" parent="274" name="airline_id">
+      <DasType>integer|0s</DasType>
+      <Position>7</Position>
+      <StateNumber>825</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="303" parent="274" name="stopover_id">
+      <DasType>integer|0s</DasType>
+      <Position>8</Position>
+      <StateNumber>832</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="304" parent="274" name="airline_id">
+      <ColNames>airline_id</ColNames>
+      <ObjectId>16510</ObjectId>
+      <RefColNames>airline_id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>829</StateNumber>
+      <RefTableId>16497</RefTableId>
+      <RefTableName>airline</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="305" parent="274" name="stopover_id">
+      <ColNames>stopover_id</ColNames>
+      <ObjectId>16515</ObjectId>
+      <RefColNames>stopover_id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>835</StateNumber>
+      <RefTableId>16504</RefTableId>
+      <RefTableName>stopover</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="306" parent="274" name="flight_pkey">
+      <ColNames>flight_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16494</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>815</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="307" parent="274" name="flight_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16495</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>815</StateNumber>
+      <UnderlyingIndexId>16494</UnderlyingIndexId>
+    </key>
+    <column id="308" parent="275" name="passenger_id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;passenger_passenger_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4316,43 +4542,43 @@ false Zulu
       <SequenceId>16388</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="267" name="first_name">
+    <column id="309" parent="275" name="first_name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="267" name="last_name">
+    <column id="310" parent="275" name="last_name">
       <DasType>varchar(50)|0s</DasType>
       <Position>3</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="267" name="email">
+    <column id="311" parent="275" name="email">
       <DasType>varchar(100)|0s</DasType>
       <Position>4</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="267" name="password">
+    <column id="312" parent="275" name="password">
       <DasType>varchar(100)|0s</DasType>
       <Position>5</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="281" parent="267" name="phone_number">
+    <column id="313" parent="275" name="phone_number">
       <DasType>varchar(20)|0s</DasType>
       <Position>6</Position>
       <StateNumber>736</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="267" name="code">
+    <column id="314" parent="275" name="code">
       <DasType>varchar(100)|0s</DasType>
       <Position>7</Position>
       <StateNumber>743</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="283" parent="267" name="passenger_pkey">
+    <index id="315" parent="275" name="passenger_pkey">
       <ColNames>passenger_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16393</ObjectId>
@@ -4361,12 +4587,137 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="284" parent="267" name="passenger_pkey">
+    <key id="316" parent="275" name="passenger_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16394</ObjectId>
       <Primary>1</Primary>
       <StateNumber>736</StateNumber>
       <UnderlyingIndexId>16393</UnderlyingIndexId>
+    </key>
+    <column id="317" parent="276" name="reservation_number">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;reservation_reservation_number_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>842</StateNumber>
+      <SequenceId>16527</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="318" parent="276" name="passenger_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>842</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="319" parent="276" name="status">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>842</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="320" parent="276" name="totalamount">
+      <DasType>double precision|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>842</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <foreign-key id="321" parent="276" name="passenger_id">
+      <ColNames>passenger_id</ColNames>
+      <ObjectId>16534</ObjectId>
+      <RefColNames>passenger_id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>845</StateNumber>
+      <RefTableId>16389</RefTableId>
+      <RefTableName>passenger</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="322" parent="276" name="reservation_pkey">
+      <ColNames>reservation_number</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16532</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>842</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="323" parent="276" name="reservation_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16533</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>842</StateNumber>
+      <UnderlyingIndexId>16532</UnderlyingIndexId>
+    </key>
+    <column id="324" parent="277" name="reservation_id">
+      <DasType>integer|0s</DasType>
+      <Position>1</Position>
+      <StateNumber>848</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="325" parent="277" name="extra_id">
+      <DasType>integer|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>848</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="326" parent="277" name="reservation_id">
+      <ColNames>reservation_id</ColNames>
+      <ObjectId>16542</ObjectId>
+      <RefColNames>reservation_number</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>851</StateNumber>
+      <RefTableId>16528</RefTableId>
+      <RefTableName>reservation</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="327" parent="277" name="extra_id">
+      <ColNames>extra_id</ColNames>
+      <ObjectId>16547</ObjectId>
+      <RefColNames>extra_id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>854</StateNumber>
+      <RefTableId>16521</RefTableId>
+      <RefTableName>extra</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <column id="328" parent="278" name="stopover_id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;stopover_stopover_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>821</StateNumber>
+      <SequenceId>16503</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="329" parent="278" name="airport">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>821</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="330" parent="278" name="duration">
+      <DasType>integer|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>821</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="331" parent="278" name="stopover_pkey">
+      <ColNames>stopover_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16508</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>821</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="332" parent="278" name="stopover_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16509</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>821</StateNumber>
+      <UnderlyingIndexId>16508</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

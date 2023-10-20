@@ -10,27 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4776af3-53c7-4704-82fb-4c5126b61a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Services/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/AirAfrika.PMH_Qw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/AdminImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/AdminImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/EscaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/StopoverDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/ReservationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/ReservationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +97,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.app.airportmanager.Entities.Users" />
+      <recent name="com.app.airportmanager.Entities" />
       <recent name="" />
+      <recent name="com.app.airportmanager.Entities.Users" />
       <recent name="com.app.airportmanager" />
     </key>
   </component>
@@ -231,7 +223,7 @@
       <workItem from="1697531685334" duration="6600000" />
       <workItem from="1697709572050" duration="6873000" />
       <workItem from="1697737908089" duration="3832000" />
-      <workItem from="1697742936874" duration="2966000" />
+      <workItem from="1697742936874" duration="6109000" />
     </task>
     <servers />
   </component>

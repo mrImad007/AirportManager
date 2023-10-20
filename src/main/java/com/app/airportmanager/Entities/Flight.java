@@ -1,78 +1,86 @@
 package com.app.airportmanager.Entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
-@Table(name = "flight")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Flight {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String departure_city;
-    private String arrival_city;
-    private Date departure_time;
-    private Date arrival_time;
-    private int available_seats;
+    @Id
+    @Column(name = "flight_id")
+    @Setter
+    @Getter
+    private int flightId;
+    @Basic
+    @Column(name = "departure_city")
+    @Setter
+    @Getter
+    private String departureCity;
+    @Basic
+    @Column(name = "arrival_city")
+    @Setter
+    @Getter
+    private String arrivalCity;
+    @Basic
+    @Column(name = "departure_time")
+    @Setter
+    @Getter
+    private Date departureTime;
+    @Basic
+    @Column(name = "arrival_time")
+    @Setter
+    @Getter
+    private Date arrivalTime;
+    @Basic
+    @Column(name = "available_seats")
+    @Setter
+    @Getter
+    private int availableSeats;
+    @Basic
+    @Column(name = "airline_id")
+    @Setter
+    @Getter
+    private Integer airlineId;
+    @Basic
+    @Column(name = "stopover_id")
+    @Setter
+    @Getter
+    private Integer stopoverId;
 
-    public Flight(String departure_city, String arrival_city, Date departure_time, Date arrival_time, int available_seats) {
-        this.departure_city = departure_city;
-        this.arrival_city = arrival_city;
-        this.departure_time = departure_time;
-        this.arrival_time = arrival_time;
-        this.available_seats = available_seats;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flight flight = (Flight) o;
+
+        if (flightId != flight.flightId) return false;
+        if (availableSeats != flight.availableSeats) return false;
+        if (departureCity != null ? !departureCity.equals(flight.departureCity) : flight.departureCity != null)
+            return false;
+        if (arrivalCity != null ? !arrivalCity.equals(flight.arrivalCity) : flight.arrivalCity != null) return false;
+        if (departureTime != null ? !departureTime.equals(flight.departureTime) : flight.departureTime != null)
+            return false;
+        if (arrivalTime != null ? !arrivalTime.equals(flight.arrivalTime) : flight.arrivalTime != null) return false;
+
+        return true;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public int hashCode() {
+        int result = flightId;
+        result = 31 * result + (departureCity != null ? departureCity.hashCode() : 0);
+        result = 31 * result + (arrivalCity != null ? arrivalCity.hashCode() : 0);
+        result = 31 * result + (departureTime != null ? departureTime.hashCode() : 0);
+        result = 31 * result + (arrivalTime != null ? arrivalTime.hashCode() : 0);
+        result = 31 * result + availableSeats;
+        return result;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getDeparture_city() {
-        return departure_city;
-    }
-
-    public void setDeparture_city(String departure_city) {
-        this.departure_city = departure_city;
-    }
-
-    public String getArrival_city() {
-        return arrival_city;
-    }
-
-    public void setArrival_city(String arrival_city) {
-        this.arrival_city = arrival_city;
-    }
-
-    public Date getDeparture_time() {
-        return departure_time;
-    }
-
-    public void setDeparture_time(Date departure_time) {
-        this.departure_time = departure_time;
-    }
-
-    public Date getArrival_time() {
-        return arrival_time;
-    }
-
-    public void setArrival_time(Date arrival_time) {
-        this.arrival_time = arrival_time;
-    }
-
-    public int getAvailable_seats() {
-        return available_seats;
-    }
-
-    public void setAvailable_seats(int available_seats) {
-        this.available_seats = available_seats;
-    }
-
-    public Flight() {
-
-    }
 }

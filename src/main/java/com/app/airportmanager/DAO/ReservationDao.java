@@ -2,7 +2,6 @@ package com.app.airportmanager.DAO;
 
 import com.app.airportmanager.Entities.Reservation;
 
-import java.sql.ResultSet;
 import java.util.List;
 
 public interface ReservationDao {
