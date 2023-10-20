@@ -32,6 +32,11 @@
         <mapping class="com.app.airportmanager.Entities.Users.Passenger" />
         <mapping class="com.app.airportmanager.Entities.Users.Admin" />
         <mapping class="com.app.airportmanager.Entities.Flight" />
+        <mapping class="com.app.airportmanager.Entities.Airline" />
+        <mapping class="com.app.airportmanager.Entities.Extra" />
+        <mapping class="com.app.airportmanager.Entities.Reservation" />
+        <mapping class="com.app.airportmanager.Entities.ReservationExtra" />
+        <mapping class="com.app.airportmanager.Entities.Stopover" />
 
     </session-factory>
 </hibernate-configuration>

@@ -10,18 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4776af3-53c7-4704-82fb-4c5126b61a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/FlightAdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/flight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/EscaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/StopoverDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/ReservationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/ReservationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Escale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -223,7 +223,9 @@
       <workItem from="1697531685334" duration="6600000" />
       <workItem from="1697709572050" duration="6873000" />
       <workItem from="1697737908089" duration="3832000" />
-      <workItem from="1697742936874" duration="6109000" />
+      <workItem from="1697742936874" duration="9217000" />
+      <workItem from="1697807322780" duration="1481000" />
+      <workItem from="1697821157146" duration="5693000" />
     </task>
     <servers />
   </component>

@@ -9,5 +9,6 @@
 </h1>
 <br/>
 <a href="hello-servlet">Check the available flights</a>
+<a href="flight-admin">Check admins</a>
 </body>
 </html>

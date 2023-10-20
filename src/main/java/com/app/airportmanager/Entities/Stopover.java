@@ -6,6 +6,7 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "stopover")
 public class Stopover {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
