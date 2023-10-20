@@ -1,47 +1,54 @@
 package com.app.airportmanager.Entities.Users;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@Table(name = "passenger")
-public class Passenger{
-
-    @Id
+@AllArgsConstructor
+@NoArgsConstructor
+public class Passenger {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String first_name;
-    private String last_name;
-    private String code;
+    @Id
+    @Column(name = "passenger_id")
+    private int passengerId;
+    @Basic
+    @Column(name = "first_name")
+    private String firstName;
+    @Basic
+    @Column(name = "last_name")
+    private String lastName;
+    @Basic
+    @Column(name = "email")
     private String email;
-    private String phone_number;
+    @Basic
+    @Column(name = "password")
     private String password;
+    @Basic
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-    public Passenger() {
-
-    }
-    public Passenger(String first_name, String last_name, String code, String email, String phone_number, String password) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.code = code;
-        this.email = email;
-        this.phone_number = phone_number;
-        this.password = password;
+    public int getPassengerId() {
+        return passengerId;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public void setPassengerId(int passengerId) {
+        this.passengerId = passengerId;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -52,14 +59,6 @@ public class Passenger{
         this.email = email;
     }
 
-    public String getPhone_number() {
-        return phone_number;
-    }
-
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -68,21 +67,40 @@ public class Passenger{
         this.password = password;
     }
 
-    public String getCode() {
-        return code;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-    public void setId(int id) {
-        this.id = id;
+        Passenger passenger = (Passenger) o;
+
+        if (passengerId != passenger.passengerId) return false;
+        if (firstName != null ? !firstName.equals(passenger.firstName) : passenger.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(passenger.lastName) : passenger.lastName != null) return false;
+        if (email != null ? !email.equals(passenger.email) : passenger.email != null) return false;
+        if (password != null ? !password.equals(passenger.password) : passenger.password != null) return false;
+        if (phoneNumber != null ? !phoneNumber.equals(passenger.phoneNumber) : passenger.phoneNumber != null)
+            return false;
+
+        return true;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public int hashCode() {
+        int result = passengerId;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
+        return result;
     }
-
 }

@@ -2,10 +2,7 @@ package com.app.airportmanager.DAO.Implementations;
 
 import com.app.airportmanager.DAO.AdminDao;
 import com.app.airportmanager.Entities.Users.Admin;
-import com.app.airportmanager.Entities.Users.Passenger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
 public class AdminImpl implements AdminDao {
@@ -13,7 +10,7 @@ public class AdminImpl implements AdminDao {
     Transaction transaction = null;
 
     public AdminImpl() {
-        sessionFactory = new Configuration().configure().buildSessionFactory();
+        sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
     }
 
     @Override
@@ -33,4 +30,23 @@ public class AdminImpl implements AdminDao {
             session.close();
         }
     }
+
+    public Admin getAdmin(int adminId) {
+        Session session = sessionFactory.openSession();
+        try {
+            transaction = session.beginTransaction();
+            Admin admin = session.get(Admin.class, adminId);
+            transaction.commit();
+            return admin;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return null;
+        } finally {
+            session.close();
+        }
+    }
+
 }

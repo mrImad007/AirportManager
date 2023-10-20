@@ -7,16 +7,18 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
+      <user-name>imads</user-name>
       <schema-mapping>
         <introspection-scope>
           <node negative="1">
             <node kind="database" qname="@">
               <node kind="schema" qname="@" />
             </node>
-            <node kind="database" qname="AirAfrika">
+            <node kind="database">
+              <name qname="postgres" />
+              <name qname="AirAfrika" />
               <node kind="schema" negative="1" />
             </node>
-            <node kind="database" qname="postgres" />
           </node>
         </introspection-scope>
       </schema-mapping>
