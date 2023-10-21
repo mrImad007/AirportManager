@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -79,11 +80,38 @@ public class FlightImpl implements FlightDao {
     @Override
     public List<Flight> getAllFlights() {
         try (Session session = sessionFactory.openSession()) {
-            return session.createQuery("FROM Flight", Flight.class).list();
+            List<Flight> flights = session.createQuery("FROM Flight", Flight.class).list();
+            return flights;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
+
+    @Override
+    public List<Flight> getFlightsByDepartureCity(String departureCity) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :city", Flight.class);
+            query.setParameter("city", departureCity);
+            return query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Flight> getFlightsByCity(String city) {
+        try (Session session = sessionFactory.openSession()) {
+            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :city", Flight.class);
+            query.setParameter("city", city);
+            System.out.println(city);
+            System.out.println(query.list());
+            return query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
 }

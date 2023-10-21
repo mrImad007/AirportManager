@@ -8,7 +8,12 @@
 <h1><%= "Welcome to AirAfrika" %>
 </h1>
 <br/>
-<a href="hello-servlet">Check the available flights</a>
-<a href="flight-admin">Check admins</a>
+<a href="flight-admin">Check the available flights</a>
+<br/>
+<form action="flight-admin" method="POST">
+    <input type="text" name="city">
+    <input type="submit" value="Check flight">
+</form>
+<br/>
 </body>
 </html>

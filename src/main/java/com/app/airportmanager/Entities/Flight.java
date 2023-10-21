@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @AllArgsConstructor
@@ -29,12 +30,12 @@ public class Flight {
     @Column(name = "departure_time")
     @Setter
     @Getter
-    private Date departureTime;
+    private Timestamp departureTime;
     @Basic
     @Column(name = "arrival_time")
     @Setter
     @Getter
-    private Date arrivalTime;
+    private Timestamp arrivalTime;
     @Basic
     @Column(name = "available_seats")
     @Setter
