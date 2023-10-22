@@ -11,7 +11,10 @@
 <a href="flight-admin">Check the available flights</a>
 <br/>
 <form action="flight-admin" method="POST">
-    <input type="text" name="city">
+    <label>
+        <input type="text" name="departureCity">
+        <input type="text" name="arrivalCity">
+    </label>
     <input type="submit" value="Check flight">
 </form>
 <br/>

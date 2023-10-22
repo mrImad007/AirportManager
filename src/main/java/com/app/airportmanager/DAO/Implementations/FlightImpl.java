@@ -89,23 +89,11 @@ public class FlightImpl implements FlightDao {
     }
 
     @Override
-    public List<Flight> getFlightsByDepartureCity(String departureCity) {
+    public List<Flight> getFlightsBySearch(String departureCity, String arrivalCity) {
         try (Session session = sessionFactory.openSession()) {
-            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :city", Flight.class);
-            query.setParameter("city", departureCity);
-            return query.list();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    public List<Flight> getFlightsByCity(String city) {
-        try (Session session = sessionFactory.openSession()) {
-            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :city", Flight.class);
-            query.setParameter("city", city);
-            System.out.println(city);
-            System.out.println(query.list());
+            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :departureCity AND arrivalCity ILIKE :arrivalCity", Flight.class);
+            query.setParameter("departureCity", departureCity);
+            query.setParameter("arrivalCity", arrivalCity);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();

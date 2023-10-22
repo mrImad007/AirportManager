@@ -1,11 +1,5 @@
 <%@ page import="com.app.airportmanager.Entities.Flight" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: imads
-  Date: 21/10/2023
-  Time: 17:30
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -35,7 +29,6 @@
 <body>
   <H1>Available flights</H1><br/>
   <div class="container">
-    <h1>Welcome</h1>
     <%
       List<Flight> flights = (List<Flight>) request.getAttribute("flights");
       if (flights != null) {

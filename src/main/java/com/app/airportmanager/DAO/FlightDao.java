@@ -10,5 +10,5 @@ public interface FlightDao {
 	boolean delete_flight(int id);
     Flight getFlightById(int id);
     List<Flight> getAllFlights();
-    public List<Flight> getFlightsByDepartureCity(String departureCity);
+    public List<Flight> getFlightsBySearch(String departureCity, String arrivalCity);
 }
