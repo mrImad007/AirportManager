@@ -22,6 +22,12 @@ public class ReservationExtra {
     @Setter
     @Getter
     private int id;
+    @Basic
+    @Column(name = "total")
+    @Setter
+    @Getter
+    private Double total;
+
 
     @Override
     public boolean equals(Object o) {

@@ -89,11 +89,13 @@ public class FlightImpl implements FlightDao {
     }
 
     @Override
-    public List<Flight> getFlightsBySearch(String departureCity, String arrivalCity) {
+    public List<Flight> getFlightsBySearch(String departureCity, String arrivalCity,String date,boolean stopover) {
         try (Session session = sessionFactory.openSession()) {
-            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :departureCity AND arrivalCity ILIKE :arrivalCity", Flight.class);
+            Query<Flight> query = session.createQuery("FROM Flight WHERE departureCity ILIKE :departureCity AND arrivalCity ILIKE :arrivalCity AND DATE(departureTime) = DATE(:date) AND stopover = :stopover", Flight.class);
             query.setParameter("departureCity", departureCity);
             query.setParameter("arrivalCity", arrivalCity);
+            query.setParameter("date",date);
+            query.setParameter("stopover",stopover);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();

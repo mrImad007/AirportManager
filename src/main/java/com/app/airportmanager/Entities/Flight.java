@@ -3,55 +3,46 @@ package com.app.airportmanager.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
+@Getter
+@Table(name = "flight")
 public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "flight_id")
-    @Setter
-    @Getter
     private int flightId;
     @Basic
     @Column(name = "departure_city")
-    @Setter
-    @Getter
     private String departureCity;
     @Basic
     @Column(name = "arrival_city")
-    @Setter
-    @Getter
     private String arrivalCity;
     @Basic
     @Column(name = "departure_time")
-    @Setter
-    @Getter
     private Timestamp departureTime;
     @Basic
     @Column(name = "arrival_time")
-    @Setter
-    @Getter
     private Timestamp arrivalTime;
     @Basic
     @Column(name = "available_seats")
-    @Setter
-    @Getter
     private int availableSeats;
     @Basic
     @Column(name = "airline_id")
-    @Setter
-    @Getter
     private Integer airlineId;
     @Basic
     @Column(name = "stopover_id")
-    @Setter
-    @Getter
     private Integer stopoverId;
-
+    @Basic
+    @Column(name = "price")
+    private Double price;
+    @Basic
+    @Column(name = "stopover")
+    private Boolean stopover;
 
     @Override
     public boolean equals(Object o) {
@@ -82,6 +73,5 @@ public class Flight {
         result = 31 * result + availableSeats;
         return result;
     }
-
 
 }

@@ -40,7 +40,15 @@ public class FlightServlet extends HttpServlet {
             case "/flight-admin" : {
                 String departureCity = request.getParameter("departureCity");
                 String arrivalCity = request.getParameter("arrivalCity");
-                showFlightbySearch(departureCity,arrivalCity, request, response);
+                String date = request.getParameter("departure-date");
+                String escale = request.getParameter("stopover");
+                boolean stopover;
+                if (escale == null){
+                    stopover = false;
+                }else {
+                    stopover = true;
+                }
+                showFlightbySearch(departureCity,arrivalCity,date,stopover,request, response);
             }
             default: {
                 request.getRequestDispatcher("/index.jsp");
@@ -53,8 +61,8 @@ public class FlightServlet extends HttpServlet {
         request.setAttribute("flight", flight);
         request.getRequestDispatcher("/flight.jsp").forward(request, response);
     }
-    public void showFlightbySearch(String departureCity,String arrivalCity, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Flight> flights = flightImpl.getFlightsBySearch(departureCity,arrivalCity);
+    public void showFlightbySearch(String departureCity,String arrivalCity,String date,boolean stopover, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Flight> flights = flightImpl.getFlightsBySearch(departureCity,arrivalCity,date,stopover);
         request.setAttribute("flights", flights);
         request.getRequestDispatcher("/flight.jsp").forward(request, response);
     }

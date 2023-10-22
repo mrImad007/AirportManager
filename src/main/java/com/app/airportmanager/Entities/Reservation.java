@@ -19,15 +19,21 @@ public class Reservation {
     @Getter
     private int passengerId;
     @Basic
-    @Column(name = "status")
+    @Column(name = "flight_id")
     @Setter
     @Getter
-    private String status;
+    private Integer flightId;
     @Basic
-    @Column(name = "totalamount")
+    @Column(name = "seats_number")
     @Setter
     @Getter
-    private Double totalamount;
+    private Integer seatsNumber;
+    @Basic
+    @Column(name = "total")
+    @Setter
+    @Getter
+    private Double total;
+
 
 
     @Override
@@ -39,9 +45,6 @@ public class Reservation {
 
         if (reservationNumber != that.reservationNumber) return false;
         if (passengerId != that.passengerId) return false;
-        if (status != null ? !status.equals(that.status) : that.status != null) return false;
-        if (totalamount != null ? !totalamount.equals(that.totalamount) : that.totalamount != null) return false;
-
         return true;
     }
 
@@ -49,8 +52,7 @@ public class Reservation {
     public int hashCode() {
         int result = reservationNumber;
         result = 31 * result + passengerId;
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        result = 31 * result + (totalamount != null ? totalamount.hashCode() : 0);
         return result;
     }
+
 }
