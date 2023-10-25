@@ -37,11 +37,15 @@
                 Flight flight = flights.get(i);
     %>
     <div class="flight-details">
-        <p>Departure City: <%= flight.getDepartureCity() %></p>
-        <p>Arrival City: <%= flight.getArrivalCity() %></p>
-        <p>Departure Time: <%= flight.getDepartureTime() %></p>
-        <p>Arrival Time: <%= flight.getArrivalTime() %></p>
-        <p>Available Seats: <%= flight.getAvailableSeats() %></p>
+        <form action="reservation-serv" method="POST">
+            <p>Departure City: <%= flight.getDepartureCity() %></p>
+            <input type="hidden" value="<%= flight.getFlightId() %>" name="flightId">
+            <p>Arrival City: <%= flight.getArrivalCity() %></p>
+            <p>Departure Time: <%= flight.getDepartureTime() %></p>
+            <p>Arrival Time: <%= flight.getArrivalTime() %></p>
+            <p>Available Seats: <%= flight.getAvailableSeats() %></p>
+            <button type="submit">book now</button>
+        </form>
     </div>
     <%
         }

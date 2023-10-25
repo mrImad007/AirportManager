@@ -2,6 +2,7 @@ package com.app.airportmanager.DAO.Implementations;
 
 import com.app.airportmanager.DAO.FlightDao;
 import com.app.airportmanager.Entities.Flight;
+import com.app.airportmanager.Entities.Users.Admin;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -68,15 +69,26 @@ public class FlightImpl implements FlightDao {
         }
         return false;
     }
+
     @Override
     public Flight getFlightById(int id) {
-        try (Session session = sessionFactory.openSession()) {
-            return session.get(Flight.class, id);
+        Session session = sessionFactory.openSession();
+        try {
+            transaction = session.beginTransaction();
+            Flight flight = session.get(Flight.class, id);
+            transaction.commit();
+            return flight;
         } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
             return null;
+        } finally {
+            session.close();
         }
     }
+
     @Override
     public List<Flight> getAllFlights() {
         try (Session session = sessionFactory.openSession()) {

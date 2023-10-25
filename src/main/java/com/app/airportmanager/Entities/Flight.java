@@ -8,8 +8,7 @@ import java.sql.Timestamp;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
+@Data
 @Table(name = "flight")
 public class Flight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)

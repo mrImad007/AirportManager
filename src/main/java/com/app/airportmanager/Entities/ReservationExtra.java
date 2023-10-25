@@ -6,26 +6,19 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Table(name = "reservation_extra", schema = "public", catalog = "postgres")
 public class ReservationExtra {
     @Basic
     @Column(name = "reservation_id")
-    @Setter
-    @Getter
     private Integer reservationId;
     @Basic
     @Column(name = "extra_id")
-    @Setter
-    @Getter
     private Integer extraId;
     @Id
-    @Setter
-    @Getter
     private int id;
     @Basic
     @Column(name = "total")
-    @Setter
-    @Getter
     private Double total;
 
 

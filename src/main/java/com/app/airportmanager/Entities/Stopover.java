@@ -6,25 +6,19 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Table(name = "stopover")
 public class Stopover {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "stopover_id")
-    @Setter
-    @Getter
     private int stopoverId;
     @Basic
     @Column(name = "airport")
-    @Setter
-    @Getter
     private String airport;
     @Basic
     @Column(name = "duration")
-    @Setter
-    @Getter
     private Integer duration;
-
 
     @Override
     public boolean equals(Object o) {

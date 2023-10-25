@@ -28,21 +28,35 @@
 </head>
 <body>
   <H1>Available flights</H1><br/>
-  <div class="container">
+
     <%
       List<Flight> flights = (List<Flight>) request.getAttribute("flights");
-      if (flights != null) {
+      if (flights != null && flights.size()>0) {
         for (int i = 0; i < flights.size(); i++) {
           Flight flight = flights.get(i);
     %>
-    <div class="flight-details">
-      <p>Departure City: <%= flight.getDepartureCity() %></p>
-      <p>Arrival City: <%= flight.getArrivalCity() %></p>
-      <p>Departure Time: <%= flight.getDepartureTime() %></p>
-      <p>Arrival Time: <%= flight.getArrivalTime() %></p>
-      <p>Available Seats: <%= flight.getAvailableSeats() %></p>
-      <hr/>
+    <div class="container">
+      <div class="flight-details">
+        <form action="reservation-serv" method="GET">
+          <p>Departure City: <%= flight.getDepartureCity() %></p>
+          <input type="hidden" value="<%= flight.getDepartureCity() %>" name="departureCity">
+          <input type="hidden" value="<%= flight.getFlightId() %>" name="flightId">
+          <p>Arrival City: <%= flight.getArrivalCity() %></p>
+          <input type="hidden" value="<%= flight.getArrivalCity() %>" name="arrivalCity">
+          <p>Departure Time: <%= flight.getDepartureTime() %></p>
+          <input type="hidden" value="<%= flight.getDepartureTime() %>" name="departureTime">
+          <input type="hidden" value="<%= flight.getStopover() %>" name="stopover">
+          <p>Arrival Time: <%= flight.getArrivalTime() %></p>
+          <p>Available Seats: <%= flight.getAvailableSeats() %> SEATS</p>
+          <p>Price/seat: <%= flight.getPrice() %> MAD</p>
+          <button type="submit" class="btn btn-primary">Choose</button>
+        </form>
+        <hr/>
+      </div>
     </div>
+  <br/>
+  <br/>
+  <br/>
     <%
       }
     } else {
@@ -51,6 +65,6 @@
     <%
       }
     %>
-  </div>
+
 </body>
 </html>

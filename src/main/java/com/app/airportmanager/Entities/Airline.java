@@ -3,22 +3,21 @@ package com.app.airportmanager.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Data
 public class Airline {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "airline_id")
-    @Setter
-    @Getter
     private int airlineId;
     @Basic
     @Column(name = "name")
-    @Setter
-    @Getter
     private String name;
+
 
     @Override
     public boolean equals(Object o) {

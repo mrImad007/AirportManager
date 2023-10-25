@@ -6,37 +6,27 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
+@Getter
 public class Passenger {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "passenger_id")
-    @Setter
-    @Getter
     private int passengerId;
     @Basic
     @Column(name = "first_name")
-    @Setter
-    @Getter
     private String firstName;
     @Basic
     @Column(name = "last_name")
-    @Setter
-    @Getter
     private String lastName;
     @Basic
     @Column(name = "email")
-    @Setter
-    @Getter
     private String email;
     @Basic
     @Column(name = "password")
-    @Setter
-    @Getter
     private String password;
     @Basic
     @Column(name = "phone_number")
-    @Setter
-    @Getter
     private String phoneNumber;
 
 

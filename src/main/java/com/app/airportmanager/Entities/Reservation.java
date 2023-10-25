@@ -6,34 +6,24 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "reservation_number")
-    @Setter
-    @Getter
     private int reservationNumber;
     @Basic
     @Column(name = "passenger_id")
-    @Setter
-    @Getter
     private int passengerId;
     @Basic
     @Column(name = "flight_id")
-    @Setter
-    @Getter
     private Integer flightId;
     @Basic
     @Column(name = "seats_number")
-    @Setter
-    @Getter
     private Integer seatsNumber;
     @Basic
     @Column(name = "total")
-    @Setter
-    @Getter
     private Double total;
-
 
 
     @Override

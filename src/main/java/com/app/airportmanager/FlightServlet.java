@@ -27,6 +27,7 @@ public class FlightServlet extends HttpServlet {
         switch (route){
             case "/flight-admin" : {
                 showAllFlights(request,response);
+                break;
             }
             default: {
                 request.getRequestDispatcher("/index.jsp");
@@ -44,11 +45,12 @@ public class FlightServlet extends HttpServlet {
                 String escale = request.getParameter("stopover");
                 boolean stopover;
                 if (escale == null){
-                    stopover = false;
-                }else {
                     stopover = true;
+                }else {
+                    stopover = false;
                 }
-                showFlightbySearch(departureCity,arrivalCity,date,stopover,request, response);
+                showFlightBySearch(departureCity,arrivalCity,date,stopover,request, response);
+                break;
             }
             default: {
                 request.getRequestDispatcher("/index.jsp");
@@ -56,19 +58,24 @@ public class FlightServlet extends HttpServlet {
         }
     }
 
-    public void showFlightbyId(int city, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        flight = flightImpl.getFlightById(city);
-        request.setAttribute("flight", flight);
-        request.getRequestDispatcher("/flight.jsp").forward(request, response);
-    }
-    public void showFlightbySearch(String departureCity,String arrivalCity,String date,boolean stopover, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void showFlightBySearch(String departureCity,String arrivalCity,String date,boolean stopover, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Flight> flights = flightImpl.getFlightsBySearch(departureCity,arrivalCity,date,stopover);
+//        for (Flight flight : flights){
+//            System.out.println(flight.getStopover());
+//            System.out.println(flight.getDepartureCity());
+//            System.out.println(flight.getArrivalCity());
+//        }
         request.setAttribute("flights", flights);
         request.getRequestDispatcher("/flight.jsp").forward(request, response);
     }
 
     public void showAllFlights(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         List<Flight> flights = flightImpl.getAllFlights();
+//        for (Flight flight : flights){
+//            System.out.println(flight.getStopover());
+//            System.out.println(flight.getDepartureCity());
+//            System.out.println(flight.getArrivalCity());
+//        }
         request.setAttribute("flights", flights);
         request.getRequestDispatcher("/Flights.jsp").forward(request, response);
     }

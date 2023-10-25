@@ -19,6 +19,9 @@
         <!-- Specify dialect for PostgreSQL -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
+        <!-- Create or update the database schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
         <!-- Enable Hibernate's automatic session context management -->
         <property name="hibernate.current_session_context_class">thread</property>
 
@@ -37,6 +40,7 @@
         <mapping class="com.app.airportmanager.Entities.Reservation" />
         <mapping class="com.app.airportmanager.Entities.ReservationExtra" />
         <mapping class="com.app.airportmanager.Entities.Stopover" />
+
 
     </session-factory>
 </hibernate-configuration>

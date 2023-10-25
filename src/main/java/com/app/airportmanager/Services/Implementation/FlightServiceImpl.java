@@ -41,17 +41,16 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public Flight getFlightById(int id) {
-        if (id != 0){
-            return flightImpl.getFlightById(id);
+    public List<Flight> getAllFlights() {
+        return null;
+    }
+
+    @Override
+    public List<Flight> getFlightsBySearch(String departureCity, String arrivalCity, String date, boolean stopover) {
+        if (departureCity != null || arrivalCity != null || date != null){
+            return flightImpl.getFlightsBySearch(departureCity, arrivalCity, date, stopover);
         }else {
             return null;
         }
-    }
-
-
-    @Override
-    public List<Flight> getAllFlights() {
-        return null;
     }
 }

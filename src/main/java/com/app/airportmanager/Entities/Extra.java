@@ -6,22 +6,17 @@ import lombok.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Extra {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "extra_id")
-    @Setter
-    @Getter
     private int extraId;
     @Basic
     @Column(name = "name")
-    @Setter
-    @Getter
     private String name;
     @Basic
     @Column(name = "price")
-    @Setter
-    @Getter
     private Double price;
 
 
