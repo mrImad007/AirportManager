@@ -18,6 +18,8 @@ public class Airline {
     @Column(name = "name")
     private String name;
 
+    @OneToMany(mappedBy = "airline")
+    private List<Flight> flights;
 
     @Override
     public boolean equals(Object o) {

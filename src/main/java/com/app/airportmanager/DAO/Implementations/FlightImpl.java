@@ -57,9 +57,16 @@ public class FlightImpl implements FlightDao {
             Transaction transaction = null;
             try {
                 transaction = session.beginTransaction();
-                session.delete(id);
-                transaction.commit();
-                return true;
+                Flight flight = session.get(Flight.class, id);
+
+                if (flight != null) {
+                    session.delete(flight);
+                    transaction.commit();
+                    return true;
+                } else {
+                    transaction.rollback();
+                    return false;
+                }
             } catch (Exception e) {
                 if (transaction != null) {
                     transaction.rollback();
@@ -69,6 +76,7 @@ public class FlightImpl implements FlightDao {
         }
         return false;
     }
+
 
     @Override
     public Flight getFlightById(int id) {

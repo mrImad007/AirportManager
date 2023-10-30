@@ -1,63 +1,47 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: imads
+  Date: 30/10/2023
+  Time: 11:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>AirAfrika - Airport Manager</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
-<h1 style="text-align: center"><%= "Welcome to AirAfrika" %></h1>
-<br/>
-<div class="container">
-    <div class="card custom-bg w-75 p-4 d-flex" style="margin-left: 10%">
-        <div class="row">
-            <div class="pb-3 h3 text-left">Flight Search &#128747;</div>
-        </div>
-        <form id="flight-form" action="flight-admin" method="post">
-            <div class="row">
-                <div class="form-group col-md align-items-start flex-column">
-                    <label for="origin" class="d-inline-flex">Depart</label>
-                    <input type="text" placeholder="City or Airport" class="form-control" id="origin" name="departureCity" required>
-                </div>
-                <div class="form-group col-md align-items-start flex-column">
-                    <label for="depart" class="d-inline-flex">Arrival</label>
-                    <input type="text" placeholder="City or Airport" class="form-control" id="depart" name="arrivalCity" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md align-items-start flex-column">
-                    <label for="departure-date" class=" d-inline-flex">Date</label>
-                    <input type="date" class="form-control" id="departure-date" name="departure-date" required>
-                </div>
-            </div>
-            <div class="form-group col-lg-6 align-items-start flex-column pt-lg-4">
-                <div class="form-check form-switch">
-                    <input class="form-check-input align-self-center" type="checkbox" id="directFlights" name="stopover">
-                    <label class="form-check-label d-inline-flex align-self-center" for="directFlights">Direct flight</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="text-left col-auto">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </div>
-        </form>
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
     </div>
-</div>
-<br/>
-<div>
-    <h1 class="text-center">Check Availble Flights</h1>
-    <a href="flight-admin" style="display: flex; justify-content: space-around; align-items: center">
-        <div class="text-left col-auto">
-            <button type="submit" class="btn btn-primary">Check</button>
+    <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <div class="max-w-md mx-auto">
+        <div>
+          <h1 class="text-2xl font-semibold">Login Form with Floating Labels</h1>
         </div>
-    </a>
+        <div class="divide-y divide-gray-200">
+          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+            <form action="Passenger-servlet" method="POST">
+              <div class="relative">
+                <input autocomplete="off" id="email" name="email" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
+                <label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
+              </div>
+              <div class="relative">
+                <input autocomplete="off" id="password" name="password" type="password" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+                <label for="password" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
+              </div>
+              <div class="relative">
+                <button class="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

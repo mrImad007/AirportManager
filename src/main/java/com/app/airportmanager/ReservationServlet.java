@@ -4,6 +4,7 @@ import com.app.airportmanager.DAO.Implementations.FlightImpl;
 import com.app.airportmanager.DAO.Implementations.ReservationImpl;
 import com.app.airportmanager.Entities.Flight;
 import com.app.airportmanager.Entities.Reservation;
+import com.app.airportmanager.Services.Implementation.FlightServiceImpl;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -18,11 +19,13 @@ public class ReservationServlet extends HttpServlet {
     Flight flight;
     FlightImpl flightImpl;
     ReservationImpl reservationImpl;
+    FlightServiceImpl flightService;
     public void init(){
         flight = new Flight();
         flightImpl = new FlightImpl();
         reservation = new Reservation();
         reservationImpl = new ReservationImpl();
+        flightService = new FlightServiceImpl();
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,18 +51,17 @@ public class ReservationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int flight_id = Integer.parseInt(request.getParameter("flightId"));
-        System.out.println(flight_id);
         showReservationForm(flight_id,request,response);
     }
 
     public void showFlightBySearch(String departureCity,String arrivalCity,String date,boolean stopover, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Flight> flights = flightImpl.getFlightsBySearch(departureCity,arrivalCity,date,stopover);
+        List<Flight> flights = flightService.getFlightsBySearch(departureCity,arrivalCity,date,stopover);
         request.setAttribute("flights", flights);
         request.getRequestDispatcher("/flight.jsp").forward(request, response);
     }
 
     public void showReservationForm(int flight_id, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        flight = flightImpl.getFlightById(flight_id);
+        flight = flightService.getFlightById(flight_id);
         request.setAttribute("flight",flight);
         request.getRequestDispatcher("/Reservation.jsp").forward(request, response);
     }

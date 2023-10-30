@@ -1,7 +1,10 @@
 package com.app.airportmanager.Entities.Users;
 
+import com.app.airportmanager.Entities.Reservation;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -28,6 +31,10 @@ public class Passenger {
     @Basic
     @Column(name = "phone_number")
     private String phoneNumber;
+
+    @OneToMany(mappedBy = "passenger")
+    private List<Reservation> reservations;
+
 
 
     @Override

@@ -30,13 +30,14 @@ public class FlightServlet extends HttpServlet {
                 break;
             }
             default: {
-                request.getRequestDispatcher("/index.jsp");
+                request.getRequestDispatcher("/Home.jsp");
             }
         }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String route = request.getServletPath();
+        System.out.println(route);
         switch (route){
             case "/flight-admin" : {
                 String departureCity = request.getParameter("departureCity");
@@ -52,19 +53,17 @@ public class FlightServlet extends HttpServlet {
                 showFlightBySearch(departureCity,arrivalCity,date,stopover,request, response);
                 break;
             }
+            case "/flight-admin/delete" : {
+                System.out.println("inside");
+            }
             default: {
-                request.getRequestDispatcher("/index.jsp");
+                request.getRequestDispatcher("/Home.jsp");
             }
         }
     }
 
     public void showFlightBySearch(String departureCity,String arrivalCity,String date,boolean stopover, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Flight> flights = flightImpl.getFlightsBySearch(departureCity,arrivalCity,date,stopover);
-//        for (Flight flight : flights){
-//            System.out.println(flight.getStopover());
-//            System.out.println(flight.getDepartureCity());
-//            System.out.println(flight.getArrivalCity());
-//        }
         request.setAttribute("flights", flights);
         request.getRequestDispatcher("/flight.jsp").forward(request, response);
     }

@@ -33,10 +33,19 @@ public class FlightServiceImpl implements FlightService {
 
     @Override
     public boolean delete_flight(int id) {
-        if (id != 0){
+        if (id > 0){
             return flightImpl.delete_flight(id);
         }else {
             return false;
+        }
+    }
+
+    @Override
+    public Flight getFlightById(int id) {
+        if (id != 0){
+            return flightImpl.getFlightById(id);
+        }else {
+            return null;
         }
     }
 

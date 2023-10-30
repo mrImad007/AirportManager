@@ -30,7 +30,6 @@
 
         <!-- Mapping package to scan -->
         <property name="hibernate.packageToScan">com.app.airportmanager.Entities</property>
-
         <!-- Entity mapping for the "com/app/airportmanager/Entities" package -->
         <mapping class="com.app.airportmanager.Entities.Users.Passenger" />
         <mapping class="com.app.airportmanager.Entities.Users.Admin" />
@@ -40,6 +39,7 @@
         <mapping class="com.app.airportmanager.Entities.Reservation" />
         <mapping class="com.app.airportmanager.Entities.ReservationExtra" />
         <mapping class="com.app.airportmanager.Entities.Stopover" />
+
 
 
     </session-factory>

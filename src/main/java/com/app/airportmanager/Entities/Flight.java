@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -42,6 +43,14 @@ public class Flight {
     @Basic
     @Column(name = "stopover")
     private Boolean stopover;
+
+    @ManyToOne
+    @JoinColumn(name = "airline_id", referencedColumnName = "airline_id", insertable = false, updatable = false)
+    private Airline airline;
+
+
+    @OneToMany(mappedBy = "flight")
+    private List<Reservation> reservations;
 
     @Override
     public boolean equals(Object o) {

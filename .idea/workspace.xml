@@ -10,44 +10,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4776af3-53c7-4704-82fb-4c5126b61a49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ConfirmationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ReservationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Reservation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/AdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/FlightOperationsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/PassengerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AddFlight.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AdminLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Confirmation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/UpdateFlight.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/013d4e9b-9e3b-41cb-9bba-915b42cb5bca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/013d4e9b-9e3b-41cb-9bba-915b42cb5bca/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/013d4e9b-9e3b-41cb-9bba-915b42cb5bca/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/013d4e9b-9e3b-41cb-9bba-915b42cb5bca/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/imads.DKn6BQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/imads.DKn6BQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/imads.DKn6BQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f954423f-831a-4d92-9088-bf8a5e893d51/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/AirAfrika.PMH_Qw/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/imads.DKn6BQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9a3717cf-4d15-4b58-83cc-a2c78ef7301e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ConfirmationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ConfirmationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/FlightImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/FlightImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/PassengerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/Implementations/PassengerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/PassengerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/DAO/PassengerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Airline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Extra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/ReservationExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/ReservationExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Stopover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Entities/Users/Passenger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/FlightServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/FlightServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ReservationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/ReservationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Services/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Services/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Services/Implementation/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/airportmanager/Services/Implementation/FlightServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Flights.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Flights.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/flight.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/flight.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Reservation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Reservation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,13 +68,16 @@
       <list>
         <option value="Interface" />
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/Reservation.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -273,7 +284,12 @@
       <workItem from="1698135811306" duration="633000" />
       <workItem from="1698136465825" duration="4768000" />
       <workItem from="1698167158416" duration="614000" />
-      <workItem from="1698221715477" duration="2832000" />
+      <workItem from="1698221715477" duration="3895000" />
+      <workItem from="1698254661679" duration="20000" />
+      <workItem from="1698255524538" duration="222000" />
+      <workItem from="1698260585273" duration="12889000" />
+      <workItem from="1698396688316" duration="11207000" />
+      <workItem from="1698660178337" duration="9787000" />
     </task>
     <servers />
   </component>

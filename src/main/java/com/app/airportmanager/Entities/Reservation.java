@@ -1,5 +1,6 @@
 package com.app.airportmanager.Entities;
 
+import com.app.airportmanager.Entities.Users.Passenger;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +26,12 @@ public class Reservation {
     @Column(name = "total")
     private Double total;
 
+    @ManyToOne
+    @JoinColumn(name = "passenger_id", referencedColumnName = "passenger_id", insertable = false, updatable = false)
+    private Passenger passenger;
+    @ManyToOne
+    @JoinColumn(name = "flight_id", referencedColumnName = "flight_id", insertable = false, updatable = false)
+    private Flight flight;
 
     @Override
     public boolean equals(Object o) {
